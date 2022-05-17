@@ -27,5 +27,6 @@ public:
 	int cardWidth;
 	int cardHeight;
 	int cardDistance;
+	int turn;
 };
 

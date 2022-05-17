@@ -41,6 +41,7 @@ void GameBoard::updateScreen(float deltaTime)
         timeToGoEndScreen -= deltaTime;
         if(timeToGoEndScreen <= 0)
         {
+            stateManager->turn = turn;
             stateManager->switchScreen(StateManager::Screen::EndScreen);
         }
     }

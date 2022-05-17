@@ -21,7 +21,7 @@ public:
     void renderTurn();
 private:
     void createGUI();
-    void createBoard(int row = 2, int column = 3, int width = 100, int height = 120, int distance = 10);
+    void createBoard(int row, int column, int width, int height, int distance);
     void renderBoard();
     void updateBoard(float deltaTime);
     std::vector <Card*> board;

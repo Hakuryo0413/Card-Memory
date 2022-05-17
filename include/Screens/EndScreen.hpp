@@ -17,5 +17,6 @@ private:
     void createGUI();
     void goToMenu();
     void goToGame();
+    void renderTurn();
     double timePauseMusic;
 };

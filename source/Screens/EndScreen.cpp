@@ -14,6 +14,7 @@ void drawRect(SDL_Renderer* renderer, SDL_Rect rect, SDL_Color color);
 void EndScreen::renderScreen()
 {
     SDL_RenderCopy(gWindow->getRenderer(), AssetManager::getInstance()->getTexture("game_board_background.png"), NULL, NULL);
+    renderTurn();
     renderWidget();
 }
 
@@ -37,7 +38,8 @@ void EndScreen::handleEvent(const SDL_Event& event)
 void EndScreen::createGUI()
 {
     createButton("button_restart.png", {555, 500}, std::bind(&EndScreen::goToGame, this));
-    createButton("button_home.png", {500, 400}, std::bind(&EndScreen::goToMenu, this));
+    createButton("button_exit_for_end_screen.png", {555, 600}, [](){ gQuit = true; });
+    createButton("button_home.png", {1100, 670}, std::bind(&EndScreen::goToMenu, this));
 }
 
 void EndScreen::goToMenu()
@@ -50,3 +52,14 @@ void EndScreen::goToGame()
     stateManager->switchScreen(StateManager::Screen::GameBoard);
 }
 
+void EndScreen::renderTurn()
+{
+    std::stringstream ss;
+    ss << "Turn: " << stateManager->turn << ",arial.ttf,100,255,255,255";
+    SDL_Texture* turnTexture = AssetManager::getInstance()->getTexturefromText(ss.str());
+    SDL_Rect rect;
+    SDL_QueryTexture(turnTexture, NULL, NULL, &rect.w, &rect.h);
+    rect.x = SCREEN_WIDTH/2 - rect.w/2;
+    rect.y = 20;
+    SDL_RenderCopy(gWindow->getRenderer(), turnTexture, NULL, &rect);
+}
