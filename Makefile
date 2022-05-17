@@ -1,0 +1,2 @@
+All:
+	g++ source/main.cpp source/General/*.cpp source/GUI/*.cpp source/Screens/*.cpp source/game/*.cpp -ISDL2/include/SDL2 -LSDL2/lib -Iinclude/General -Iinclude/GUI -Iinclude/Screens -Iinclude/game -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -o Card_Memory.exe
