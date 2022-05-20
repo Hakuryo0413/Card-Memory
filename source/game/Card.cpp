@@ -31,76 +31,76 @@ void Card::render()
         {
             switch(suit)
             {
-                case 2_CARD:
+                case a_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("2.png");
                     break;
-                case 3_CARD:
+                case b_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("3.png");
                     break;
-                case 4_CARD:
+                case c_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("4.png");
                     break;
-                case 5_CARD:
+                case d_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("5.png");
                     break;
-                case 6_CARD:
+                case e_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("6.png");
                     break;
-                case 7_CARD:
+                case f_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("7.png");
                     break;
-                case 8_CARD:
+                case g_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("8.png");
                     break;
-                case 9_CARD:
+                case h_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("9.png");
                     break;
-                case 10_CARD:
+                case i_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("10.png");
                     break;
-                case 11_CARD:
+                case k_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("11.png");
                     break;
-                case 12_CARD:
+                case l_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("12.png");
                     break;
-                case 13_CARD:
+                case m_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("13.png");
                     break;
-                case 14_CARD:
+                case n_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("14.png");
                     break;
-                case 15_CARD:
+                case o_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("15.png");
                     break;
-                case 16_CARD:
+                case p_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("16.png");
                     break;
-                case 17_CARD:
+                case q_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("17.png");
                     break;
-                case 18_CARD:
+                case r_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("18.png");
                     break;
-                case 19_CARD:
+                case s_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("19.png");
                     break;
-                case 20_CARD:
+                case t_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("20.png");
                     break;
-                case 21_CARD:
+                case u_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("21.png");
                     break;
-                case 22_CARD:
+                case v_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("22.png");
                     break;
-                case 23_CARD:
+                case w_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("23.png");
                     break;
-                case 24_CARD:
+                case x_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("24.png");
                     break;
-                case 25_CARD:
+                case y_CARD:
                     cardTexture = AssetManager::getInstance()->getTexture("25.png");
                     break;
             }
