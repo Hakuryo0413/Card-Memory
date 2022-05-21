@@ -37,9 +37,9 @@ void EndScreen::handleEvent(const SDL_Event& event)
 
 void EndScreen::createGUI()
 {
-    createButton("button_restart.png", {555, 500}, std::bind(&EndScreen::goToGame, this));
-    createButton("button_exit_for_end_screen.png", {555, 600}, [](){ gQuit = true; });
-    createButton("button_home.png", {1100, 670}, std::bind(&EndScreen::goToMenu, this));
+    createButton("button_restart.png", {555, 450}, std::bind(&EndScreen::goToGame, this));
+    createButton("Exit.png", {555, 500}, [](){ gQuit = true; });
+    createButton("button_home.png", {1230, 102}, std::bind(&EndScreen::goToMenu, this));
 }
 
 void EndScreen::goToMenu()
@@ -60,6 +60,6 @@ void EndScreen::renderTurn()
     SDL_Rect rect;
     SDL_QueryTexture(turnTexture, NULL, NULL, &rect.w, &rect.h);
     rect.x = SCREEN_WIDTH/2 - rect.w/2;
-    rect.y = 20;
+    rect.y = 30;
     SDL_RenderCopy(gWindow->getRenderer(), turnTexture, NULL, &rect);
 }

@@ -11,7 +11,7 @@ AboutScreen::~AboutScreen()
 
 void AboutScreen::renderScreen()
 {
-    SDL_RenderCopy(gWindow->getRenderer(), AssetManager::getInstance()->getTexture("game_board_background.png"), NULL, NULL);
+    SDL_RenderCopy(gWindow->getRenderer(), AssetManager::getInstance()->getTexture("Rules_Game.png"), NULL, NULL);
     renderWidget();
 }
 
@@ -26,7 +26,7 @@ void AboutScreen::handleEvent(const SDL_Event& event)
 
 void AboutScreen::createGUI()
 {
-    createButton("button_home.png", {1200, 600 }, std::bind(&AboutScreen::goToMenu, this));
+    createButton("button_home.png", {1230, 102}, std::bind(&AboutScreen::goToMenu, this));
 }
 
 void AboutScreen::goToMenu()

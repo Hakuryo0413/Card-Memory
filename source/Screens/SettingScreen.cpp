@@ -29,7 +29,7 @@ void SettingScreen::handleEvent(const SDL_Event& event)
 
 void SettingScreen::createGUI()
 {
-    createButton("button_home.png", {1000, 600}, std::bind(&SettingScreen::goToMenu, this));
+    createButton("button_home.png", {1230, 102}, std::bind(&SettingScreen::goToMenu, this));
     createButton("Easy.png", {555, 200}, std::bind(&SettingScreen::select4x4, this));
     createButton("Moderate.png", {555, 300}, std::bind(&SettingScreen::select6x6, this));
     createButton("Difficult.png", {555, 400}, std::bind(&SettingScreen::select6x8, this));
