@@ -5,6 +5,7 @@
 #include "SettingScreen.hpp"
 #include "AboutScreen.hpp"
 #include "GameBoard.hpp"
+#include "LeaderboardScreen.hpp"
 
 #include <iostream> //TODO:remove
 
@@ -41,6 +42,9 @@ void StateManager::switchScreen(Screen newScreen)
 		break;
 	case Screen::GameBoard:
 		nextScreen = new GameBoard(this);
+		break;
+	case Screen::LeaderboardScreen:
+		nextScreen = new LeaderboardScreen(this);
 		break;
 	default:
 		break;

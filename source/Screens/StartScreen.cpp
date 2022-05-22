@@ -34,7 +34,8 @@ void StartScreen::handleEvent(const SDL_Event& event)
 void StartScreen::createGUI()
 {
     createButton("Start.png", {555, 450}, std::bind(&StartScreen::startGame, this));
-    createButton("Rules.png", {555, 525}, std::bind(&StartScreen::gotoAboutScreen, this));
+    createButton("Rules.png", {555, 500}, std::bind(&StartScreen::gotoAboutScreen, this));
+    createButton("Exit.png", {555, 550}, std::bind(&StartScreen::goToLeaderboardScreen, this));
     createButton("Exit.png", {555, 600}, [](){ gQuit = true; });
 }
 
@@ -46,4 +47,9 @@ void StartScreen::startGame()
 void StartScreen::gotoAboutScreen()
 {
     stateManager->switchScreen(StateManager::Screen::AboutScreen);
+}
+
+void StartScreen::goToLeaderboardScreen()
+{
+    stateManager->switchScreen(StateManager::Screen::LeaderboardScreen);
 }
