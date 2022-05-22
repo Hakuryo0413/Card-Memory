@@ -10,6 +10,10 @@ GameBoard::GameBoard(StateManager* stateManager) : GameScreen(stateManager)
     timeToGoEndScreen = -1;
     turn = 0;
     freezeTime = -1;
+    selectCardSound = AssetManager::getInstance()->getSoundBuffer("button_click_sound.wav");
+    correctSelectCardSound = AssetManager::getInstance()->getSoundBuffer("button_click_sound.wav");
+    wrongSelectCardSound = AssetManager::getInstance()->getSoundBuffer("button_click_sound.wav");
+    canNotSelectCardSound = AssetManager::getInstance()->getSoundBuffer("button_click_sound.wav");
 }
 
 GameBoard::~GameBoard()
@@ -64,6 +68,7 @@ void GameBoard::handleEvent(const SDL_Event& event)
                 {
                     selectedCards.first = card;
                     card->setShow(true);
+                    Mix_PlayChannel(-1, selectCardSound, 0);
                 }
                 else if(selectedCards.first != card)
                 {
@@ -77,6 +82,7 @@ void GameBoard::handleEvent(const SDL_Event& event)
                         selectedCards.second->disappear(1);
                         selectedCards.first = nullptr;
                         selectedCards.second = nullptr;
+                        Mix_PlayChannel(-1, correctSelectCardSound, 0);
                     }
                     else
                     {
@@ -85,12 +91,13 @@ void GameBoard::handleEvent(const SDL_Event& event)
                         selectedCards.second->hide(freezeTime);
                         selectedCards.first = nullptr;
                         selectedCards.second = nullptr;
+                        Mix_PlayChannel(-1, wrongSelectCardSound, 0);
                     }
                 }
             }
             else
             {
-                //play sound
+                Mix_PlayChannel(-1, canNotSelectCardSound, 0);
             }
         }
     }

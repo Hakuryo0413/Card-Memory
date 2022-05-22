@@ -14,7 +14,8 @@ public:
 		SettingScreen,
 		EndScreen,
 		AboutScreen,
-		GameBoard
+		GameBoard,
+		LeaderboardScreen,
 	};
 
 	void switchScreen(Screen newScreen);

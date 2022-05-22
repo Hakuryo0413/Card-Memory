@@ -21,4 +21,5 @@ private:
     void createGUI();
     void startGame();
     void gotoAboutScreen();
+    void goToLeaderboardScreen();
 };
