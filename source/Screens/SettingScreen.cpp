@@ -52,6 +52,7 @@ void SettingScreen::select4x4()
     stateManager->cardWidth = 125;
     stateManager->cardHeight = 125;
     stateManager->cardDistance = 5;
+    stateManager->gameMode = StateManager::GameMode::Easy;
     goToGame();
 }
 
@@ -62,6 +63,7 @@ void SettingScreen::select6x6()
     stateManager->cardWidth = 100;
     stateManager->cardHeight = 100;
     stateManager->cardDistance = 5;
+    stateManager->gameMode = StateManager::GameMode::Moderate;
     goToGame();
 }
 
@@ -72,5 +74,6 @@ void SettingScreen::select6x8()
     stateManager->cardWidth = 100;
     stateManager->cardHeight = 100;
     stateManager->cardDistance = 5;
+    stateManager->gameMode = StateManager::GameMode::Difficult;
     goToGame();
 }

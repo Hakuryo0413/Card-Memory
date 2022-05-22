@@ -29,5 +29,14 @@ public:
 	int cardHeight;
 	int cardDistance;
 	int turn;
+
+	enum class GameMode
+	{
+		Easy,
+		Moderate,
+		Difficult,
+	};
+
+	GameMode gameMode;
 };
 

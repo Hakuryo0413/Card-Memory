@@ -1,5 +1,6 @@
 #pragma once
 
+#include <fstream>
 #include <functional>
 #include "GameScreen.hpp"
 
@@ -19,4 +20,7 @@ private:
     void goToGame();
     void renderTurn();
     double timePauseMusic;
+    int Easy_HighScore;
+    int Moderate_HighScore;
+    int Difficult_HighScore;
 };
