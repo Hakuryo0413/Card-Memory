@@ -158,8 +158,8 @@ void GameBoard::renderTurn()
     SDL_Texture* turnTexture = AssetManager::getInstance()->getTexturefromText(ss.str());
     SDL_Rect rect;
     SDL_QueryTexture(turnTexture, NULL, NULL, &rect.w, &rect.h);
-    rect.x = SCREEN_WIDTH/2 - rect.w/2;
-    rect.y = 20;
+    rect.x = SCREEN_WIDTH/2 - rect.w/2 + 350;
+    rect.y = 10;
     SDL_RenderCopy(gWindow->getRenderer(), turnTexture, NULL, &rect);
 }
 
