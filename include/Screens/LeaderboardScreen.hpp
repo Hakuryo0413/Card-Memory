@@ -14,4 +14,7 @@ public:
 private:
     void createGUI();
     void goToMenu();
+    int Easy_HighScore;
+    int Moderate_HighScore;
+    int Difficult_HighScore;
 };

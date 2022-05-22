@@ -3,6 +3,10 @@
 LeaderboardScreen::LeaderboardScreen(StateManager* stateManager) : GameScreen(stateManager)
 {
     createGUI();
+    std::ifstream inFile("HighScore.txt");
+    inFile >> Easy_HighScore >> Moderate_HighScore >> Difficult_HighScore;
+    std::cout << Easy_HighScore << " " << Moderate_HighScore << " " << Difficult_HighScore << std::endl;
+    inFile.close();
 }
 
 LeaderboardScreen::~LeaderboardScreen()

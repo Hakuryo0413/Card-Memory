@@ -3,6 +3,46 @@
 EndScreen::EndScreen(StateManager* stateManager) : GameScreen(stateManager)
 {
     createGUI();
+    std::ifstream inFile("HighScore.txt");
+    inFile >> Easy_HighScore >> Moderate_HighScore >> Difficult_HighScore;
+    std::cout << Easy_HighScore << " " << Moderate_HighScore << " " << Difficult_HighScore << std::endl;
+    inFile.close();
+    switch (stateManager->gameMode)
+    {
+        case StateManager::GameMode::Easy:
+        {
+            if (stateManager->turn < Easy_HighScore)
+            {
+                Easy_HighScore = stateManager->turn;
+                std::ofstream outFile("HighScore.txt");
+                outFile << Easy_HighScore << " " << Moderate_HighScore << " " << Difficult_HighScore;
+                outFile.close();
+            }
+            break;
+        }
+        case StateManager::GameMode::Moderate:
+        {
+            if (stateManager->turn < Moderate_HighScore)
+            {
+                Moderate_HighScore = stateManager->turn;
+                std::ofstream outFile("HighScore.txt");
+                outFile << Easy_HighScore << " " << Moderate_HighScore << " " << Difficult_HighScore;
+                outFile.close();
+            }
+            break;
+        }
+        case StateManager::GameMode::Difficult:
+        {
+            if (stateManager->turn < Difficult_HighScore)
+            {
+                Difficult_HighScore = stateManager->turn;
+                std::ofstream outFile("HighScore.txt");
+                outFile << Easy_HighScore << " " << Moderate_HighScore << " " << Difficult_HighScore;
+                outFile.close();
+            }
+            break;
+        }
+    }
 }
 
 EndScreen::~EndScreen()
