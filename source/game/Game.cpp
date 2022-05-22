@@ -20,10 +20,10 @@ Game::Game()
     }
     stateManager = new StateManager();
     gQuit = false;
-    musicOn = new Button("Btn06.png", {1200, 10}, std::bind(&Game::switchMusic, this));
-    musicOff = new Button("Btn06.png", {1200, 10}, std::bind(&Game::switchMusic, this));
-    soundOn = new Button("Btn06.png", {1200, 55}, std::bind(&Game::switchAudio, this));
-    soundOff = new Button("Btn06.png", {1200, 55}, std::bind(&Game::switchAudio, this));
+    musicOn = new Button("button_music_on.png", {1230, 10}, std::bind(&Game::switchMusic, this));
+    musicOff = new Button("button_music_off.png", {1230, 10}, std::bind(&Game::switchMusic, this));
+    soundOn = new Button("button_music_on.png", {1230, 55}, std::bind(&Game::switchAudio, this));
+    soundOff = new Button("button_music_off.png", {1230, 55}, std::bind(&Game::switchAudio, this));
 }
 
 Game::~Game()

@@ -26,7 +26,7 @@ void AboutScreen::handleEvent(const SDL_Event& event)
 
 void AboutScreen::createGUI()
 {
-    createButton("button_home.png", {1230, 102}, std::bind(&AboutScreen::goToMenu, this));
+    createButton("button_home.png", {15, 10}, std::bind(&AboutScreen::goToMenu, this));
 }
 
 void AboutScreen::goToMenu()

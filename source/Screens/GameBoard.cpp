@@ -98,7 +98,7 @@ void GameBoard::handleEvent(const SDL_Event& event)
 
 void GameBoard::createGUI()
 {
-    createButton("button_home.png", {1000, 600}, std::bind(&GameBoard::goToHome, this));
+    createButton("button_home.png", {15, 10}, std::bind(&GameBoard::goToHome, this));
 }
 
 void GameBoard::createBoard(int row, int column, int width, int height, int distance)
@@ -154,7 +154,7 @@ void GameBoard::updateBoard(float deltaTime)
 void GameBoard::renderTurn()
 {
     std::stringstream ss;
-    ss << "Turn: " << turn << ",arial.ttf,100,255,255,255";
+    ss << "Turn: " << turn << ",PaytoneOne.ttf,50,255,255,255";
     SDL_Texture* turnTexture = AssetManager::getInstance()->getTexturefromText(ss.str());
     SDL_Rect rect;
     SDL_QueryTexture(turnTexture, NULL, NULL, &rect.w, &rect.h);

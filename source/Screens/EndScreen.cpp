@@ -39,7 +39,7 @@ void EndScreen::createGUI()
 {
     createButton("button_restart.png", {555, 450}, std::bind(&EndScreen::goToGame, this));
     createButton("Exit.png", {555, 500}, [](){ gQuit = true; });
-    createButton("button_home.png", {1230, 102}, std::bind(&EndScreen::goToMenu, this));
+    createButton("button_home.png", {15, 10}, std::bind(&EndScreen::goToMenu, this));
 }
 
 void EndScreen::goToMenu()
@@ -55,7 +55,7 @@ void EndScreen::goToGame()
 void EndScreen::renderTurn()
 {
     std::stringstream ss;
-    ss << "Turn: " << stateManager->turn << ",arial.ttf,100,255,255,255";
+    ss << "Turn: " << stateManager->turn << ",PaytoneOne.ttf,50,255,255,255";
     SDL_Texture* turnTexture = AssetManager::getInstance()->getTexturefromText(ss.str());
     SDL_Rect rect;
     SDL_QueryTexture(turnTexture, NULL, NULL, &rect.w, &rect.h);
