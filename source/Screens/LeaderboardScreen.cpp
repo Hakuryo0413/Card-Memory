@@ -14,7 +14,7 @@ LeaderboardScreen::~LeaderboardScreen()
 
 void LeaderboardScreen::renderScreen()
 {
-    SDL_RenderCopy(gWindow->getRenderer(), AssetManager::getInstance()->getTexture("game_board_background.png"), NULL, NULL);
+    SDL_RenderCopy(gWindow->getRenderer(), AssetManager::getInstance()->getTexture("game_background.png"), NULL, NULL);
     renderWidget();
     renderLeaderboardText();
     renderEasyHighScore();

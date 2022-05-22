@@ -11,9 +11,9 @@ GameBoard::GameBoard(StateManager* stateManager) : GameScreen(stateManager)
     turn = 0;
     freezeTime = -1;
     selectCardSound = AssetManager::getInstance()->getSoundBuffer("button_click_sound.wav");
-    correctSelectCardSound = AssetManager::getInstance()->getSoundBuffer("button_click_sound.wav");
-    wrongSelectCardSound = AssetManager::getInstance()->getSoundBuffer("button_click_sound.wav");
-    canNotSelectCardSound = AssetManager::getInstance()->getSoundBuffer("button_click_sound.wav");
+    correctSelectCardSound = AssetManager::getInstance()->getSoundBuffer("correct_pair_sound.wav");
+    wrongSelectCardSound = AssetManager::getInstance()->getSoundBuffer("wrong_pair_sound.wav");
+    canNotSelectCardSound = AssetManager::getInstance()->getSoundBuffer("canNot_select_sound.wav");
 }
 
 GameBoard::~GameBoard()
