@@ -5,14 +5,15 @@ EndScreen::EndScreen(StateManager* stateManager) : GameScreen(stateManager)
     createGUI();
     std::ifstream inFile("HighScore.txt");
     inFile >> Easy_HighScore >> Moderate_HighScore >> Difficult_HighScore;
-    std::cout << Easy_HighScore << " " << Moderate_HighScore << " " << Difficult_HighScore << std::endl;
     inFile.close();
+    isRenderNotification = false;
     switch (stateManager->gameMode)
     {
         case StateManager::GameMode::Easy:
         {
             if (stateManager->turn < Easy_HighScore)
             {
+                isRenderNotification = true;
                 Easy_HighScore = stateManager->turn;
                 std::ofstream outFile("HighScore.txt");
                 outFile << Easy_HighScore << " " << Moderate_HighScore << " " << Difficult_HighScore;
@@ -24,6 +25,7 @@ EndScreen::EndScreen(StateManager* stateManager) : GameScreen(stateManager)
         {
             if (stateManager->turn < Moderate_HighScore)
             {
+                isRenderNotification = true;
                 Moderate_HighScore = stateManager->turn;
                 std::ofstream outFile("HighScore.txt");
                 outFile << Easy_HighScore << " " << Moderate_HighScore << " " << Difficult_HighScore;
@@ -35,6 +37,7 @@ EndScreen::EndScreen(StateManager* stateManager) : GameScreen(stateManager)
         {
             if (stateManager->turn < Difficult_HighScore)
             {
+                isRenderNotification = true;
                 Difficult_HighScore = stateManager->turn;
                 std::ofstream outFile("HighScore.txt");
                 outFile << Easy_HighScore << " " << Moderate_HighScore << " " << Difficult_HighScore;
@@ -56,6 +59,10 @@ void EndScreen::renderScreen()
     SDL_RenderCopy(gWindow->getRenderer(), AssetManager::getInstance()->getTexture("game_board_background.png"), NULL, NULL);
     renderTurn();
     renderWidget();
+    if(isRenderNotification)
+    {
+        renderNotification();
+    }
 }
 
 void EndScreen::updateScreen(float deltaTime)
@@ -95,11 +102,21 @@ void EndScreen::goToGame()
 void EndScreen::renderTurn()
 {
     std::stringstream ss;
-    ss << "Turn: " << stateManager->turn << ",PaytoneOne.ttf,50,255,255,255";
+    ss << "Turn: " << stateManager->turn << ",PaytoneOne.ttf,100,255,255,255";
     SDL_Texture* turnTexture = AssetManager::getInstance()->getTexturefromText(ss.str());
     SDL_Rect rect;
     SDL_QueryTexture(turnTexture, NULL, NULL, &rect.w, &rect.h);
     rect.x = SCREEN_WIDTH/2 - rect.w/2;
-    rect.y = 30;
+    rect.y = 100;
+    SDL_RenderCopy(gWindow->getRenderer(), turnTexture, NULL, &rect);
+}
+
+void EndScreen::renderNotification()
+{
+    SDL_Texture* turnTexture = AssetManager::getInstance()->getTexturefromText("New High Score!,PaytoneOne.ttf,40,255,255,255");
+    SDL_Rect rect;
+    SDL_QueryTexture(turnTexture, NULL, NULL, &rect.w, &rect.h);
+    rect.x = SCREEN_WIDTH/2 - rect.w/2;
+    rect.y = 250;
     SDL_RenderCopy(gWindow->getRenderer(), turnTexture, NULL, &rect);
 }

@@ -23,4 +23,6 @@ private:
     int Easy_HighScore;
     int Moderate_HighScore;
     int Difficult_HighScore;
+    void renderNotification();
+    bool isRenderNotification;
 };

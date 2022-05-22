@@ -5,7 +5,6 @@ LeaderboardScreen::LeaderboardScreen(StateManager* stateManager) : GameScreen(st
     createGUI();
     std::ifstream inFile("HighScore.txt");
     inFile >> Easy_HighScore >> Moderate_HighScore >> Difficult_HighScore;
-    std::cout << Easy_HighScore << " " << Moderate_HighScore << " " << Difficult_HighScore << std::endl;
     inFile.close();
 }
 
@@ -15,8 +14,9 @@ LeaderboardScreen::~LeaderboardScreen()
 
 void LeaderboardScreen::renderScreen()
 {
-    
+    SDL_RenderCopy(gWindow->getRenderer(), AssetManager::getInstance()->getTexture("game_board_background.png"), NULL, NULL);
     renderWidget();
+    renderLeaderboardText();
     renderEasyHighScore();
     renderModerateHighScore();
     renderDifficultHighScore();
@@ -52,12 +52,12 @@ void LeaderboardScreen::renderEasyHighScore()
     {
         ss << "Easy: " << Easy_HighScore;
     }
-    ss << ",PaytoneOne.ttf,75,255,255,255";
+    ss << ",PaytoneOne.ttf,50,255,255,255";
     SDL_Texture * texture = AssetManager::getInstance()->getTexturefromText(ss.str());
     SDL_Rect rect;
     SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
     rect.x = (SCREEN_WIDTH - rect.w) / 2;
-    rect.y = 200;
+    rect.y =300;
     SDL_RenderCopy(gWindow->getRenderer(), texture, NULL, &rect);
 }
 
@@ -72,12 +72,12 @@ void LeaderboardScreen::renderModerateHighScore()
     {
         ss << "Moderate: " << Moderate_HighScore;
     }
-    ss << ",PaytoneOne.ttf,75,255,255,255";
+    ss << ",PaytoneOne.ttf,50,255,255,255";
     SDL_Texture * texture = AssetManager::getInstance()->getTexturefromText(ss.str());
     SDL_Rect rect;
     SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
     rect.x = (SCREEN_WIDTH - rect.w) / 2;
-    rect.y = 300;
+    rect.y = 360;
     SDL_RenderCopy(gWindow->getRenderer(), texture, NULL, &rect);
 }
 
@@ -92,12 +92,24 @@ void LeaderboardScreen::renderDifficultHighScore()
     {
         ss << "Difficult: " << Difficult_HighScore;
     }
-    ss << ",PaytoneOne.ttf,75,255,255,255";
+    ss << ",PaytoneOne.ttf,50,255,255,255";
     SDL_Texture * texture = AssetManager::getInstance()->getTexturefromText(ss.str());
     SDL_Rect rect;
     SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
     rect.x = (SCREEN_WIDTH - rect.w) / 2;
-    rect.y = 400;
+    rect.y = 420;
     SDL_RenderCopy(gWindow->getRenderer(), texture, NULL, &rect);
 }
 
+void LeaderboardScreen::renderLeaderboardText()
+{
+    std::stringstream ss;
+    ss << "Leaderboard";
+    ss << ",PaytoneOne.ttf,100,255,255,255";
+    SDL_Texture * texture = AssetManager::getInstance()->getTexturefromText(ss.str());
+    SDL_Rect rect;
+    SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
+    rect.x = (SCREEN_WIDTH - rect.w) / 2;
+    rect.y = 100;
+    SDL_RenderCopy(gWindow->getRenderer(), texture, NULL, &rect);
+}

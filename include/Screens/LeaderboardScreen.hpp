@@ -20,4 +20,5 @@ private:
     void renderEasyHighScore();
     void renderModerateHighScore();
     void renderDifficultHighScore();
+    void renderLeaderboardText();
 };
