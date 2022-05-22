@@ -154,12 +154,12 @@ void GameBoard::updateBoard(float deltaTime)
 void GameBoard::renderTurn()
 {
     std::stringstream ss;
-    ss << "Turn: " << turn << ",PaytoneOne.ttf,50,255,255,255";
+    ss << "Turn: " << turn << ",PaytoneOne.ttf,40,255,255,255";
     SDL_Texture* turnTexture = AssetManager::getInstance()->getTexturefromText(ss.str());
     SDL_Rect rect;
     SDL_QueryTexture(turnTexture, NULL, NULL, &rect.w, &rect.h);
-    rect.x = SCREEN_WIDTH/2 - rect.w/2 + 350;
-    rect.y = 10;
+    rect.x = 1090;
+    rect.y = 145;
     SDL_RenderCopy(gWindow->getRenderer(), turnTexture, NULL, &rect);
 }
 
