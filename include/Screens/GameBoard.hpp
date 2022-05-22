@@ -32,4 +32,8 @@ private:
     float timeToGoEndScreen;
     int turn;
     void goToHome();
+    Mix_Chunk* selectCardSound;
+    Mix_Chunk* correctSelectCardSound;
+    Mix_Chunk* wrongSelectCardSound;
+    Mix_Chunk* canNotSelectCardSound;
 };

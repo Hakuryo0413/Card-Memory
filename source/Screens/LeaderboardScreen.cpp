@@ -11,7 +11,7 @@ LeaderboardScreen::~LeaderboardScreen()
 
 void LeaderboardScreen::renderScreen()
 {
-    SDL_RenderCopy(gWindow->getRenderer(), AssetManager::getInstance()->getTexture("start_screen_background.png"), NULL, NULL);
+    
     renderWidget();
 }
 
