@@ -34,7 +34,7 @@ void Game::run()
 {   
     Mix_Music *music = Mix_LoadMUS(AUDIO_PATH  "music.wav");
     Mix_PlayMusic(music, -1);
-	stateManager->switchScreen(StateManager::Screen::EndScreen);
+	stateManager->switchScreen(StateManager::Screen::StartScreen);
     Uint32 deltaTime = SDL_GetTicks();
 	while (!gQuit)
     {
