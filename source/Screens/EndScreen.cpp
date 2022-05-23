@@ -7,6 +7,16 @@ EndScreen::EndScreen(StateManager* stateManager) : GameScreen(stateManager)
     inFile >> Easy_HighScore >> Moderate_HighScore >> Difficult_HighScore;
     inFile.close();
     isRenderNotification = false;
+    if(!Mix_PausedMusic())
+    {
+        Mix_PauseMusic();
+        timePauseMusic = 2;
+    }
+    else
+    {
+        timePauseMusic = -1;
+    }
+    if(gSoundOn) Mix_PlayChannel(-1, AssetManager::getInstance()->getSoundBuffer("win_game_sound.wav"), 0);
     switch (stateManager->gameMode)
     {
         case StateManager::GameMode::Easy:

@@ -68,7 +68,7 @@ void GameBoard::handleEvent(const SDL_Event& event)
                 {
                     selectedCards.first = card;
                     card->setShow(true);
-                    Mix_PlayChannel(-1, selectCardSound, 0);
+                    if(gSoundOn) Mix_PlayChannel(-1, selectCardSound, 0);
                 }
                 else if(selectedCards.first != card)
                 {
@@ -82,7 +82,7 @@ void GameBoard::handleEvent(const SDL_Event& event)
                         selectedCards.second->disappear(1);
                         selectedCards.first = nullptr;
                         selectedCards.second = nullptr;
-                        Mix_PlayChannel(-1, correctSelectCardSound, 0);
+                        if(gSoundOn) Mix_PlayChannel(-1, correctSelectCardSound, 0);
                     }
                     else
                     {
@@ -91,13 +91,13 @@ void GameBoard::handleEvent(const SDL_Event& event)
                         selectedCards.second->hide(freezeTime);
                         selectedCards.first = nullptr;
                         selectedCards.second = nullptr;
-                        Mix_PlayChannel(-1, wrongSelectCardSound, 0);
+                        if(gSoundOn) Mix_PlayChannel(-1, wrongSelectCardSound, 0);
                     }
                 }
             }
             else
             {
-                Mix_PlayChannel(-1, canNotSelectCardSound, 0);
+                if(gSoundOn) Mix_PlayChannel(-1, canNotSelectCardSound, 0);
             }
         }
     }

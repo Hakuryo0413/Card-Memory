@@ -9,6 +9,7 @@
 #include "Button.hpp"
 #include "Card.hpp"
 extern Window* gWindow;
+extern bool gSoundOn;
 
 class GameBoard : public GameScreen
 {

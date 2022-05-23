@@ -5,6 +5,7 @@
 #include "GameScreen.hpp"
 
 extern bool gQuit;
+extern bool gSoundOn;
 
 class EndScreen : public GameScreen
 {
