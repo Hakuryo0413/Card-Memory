@@ -3,7 +3,7 @@ _Trương Thị Huyền Trâm - 21020413_
 --------------------------
 ![](preview/startscreen.png)
 
-Project này mình làm về game Cards Matching Memory. Ngôn ngữ được sử dụng trong game là [C++](https://vi.wikipedia.org/wiki/C%2B%2B) và thư viện đồ họa [SDL2](https://www.libsdl.org/).
+Project này mình làm về game Cards Matching Memory. Ngôn ngữ được sử dụng trong game là [C++](https://vi.wikipedia.org/wiki/C%2B%2B) và thư viện đồ họa [SDL2](https://www.libsdl.org/).
 ### Mục lục:
 - 1. Hướng dẫn cài đặt
 - 2. Mô tả chung
