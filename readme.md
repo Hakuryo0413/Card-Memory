@@ -1,7 +1,7 @@
 # Cards Matching Memory
 _Trương Thị Huyền Trâm - 21020413_
 --------------------------
-![](preview/img/startscreen.PNG)
+![](preview/startscreen.png)
 
 Project này mình làm về game Cards Matching Memory. Ngôn ngữ được sử dụng trong game là [C++](https://vi.wikipedia.org/wiki/C%2B%2B) và thư viện đồ họa [SDL2](https://www.libsdl.org/).
 ### Mục lục:
