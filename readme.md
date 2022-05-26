@@ -15,7 +15,7 @@ Project này mình làm về game Cards Matching Memory. Ngôn ngữ được s�
  
 - Bước 1: Cài đặt `SDL2` vào `Visual Studio Code` theo như [Hướng dẫn](https://www.youtube.com/watch?v=Zdg6aaBTctw&t=449s).
 - Bước 2: Tải project game về và mở `Visual Studio Code`.
-- Bước 3: Mở `terminal` gõ lệnh `mingw32-make` và `./Cards Matching Memory` để chơi game.
+- Bước 3: Mở `terminal` gõ lệnh `mingw32-make` và `./Card Memory` để chơi game.
  
 ### 2. Mô tả chung:
 
