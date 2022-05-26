@@ -55,5 +55,6 @@ tư duy Code, thuật toán, kĩ năng chỉnh sửa ảnh.
 - Nâng cao kỹ năng photoshop để có đồ họa đẹp hơn cho game.
 - Thêm các theme để người chơi có nhiều lựa chọn hơn. 
 - Thêm các animation tạo hiệu ứng khi lật bài, biến mất.
-- Thêm chế độ nhiều người chơi 
+- Thêm chế độ nhiều người chơi.
+ 
 ***Mọi thắc mắc gửi về email: `21020413@vnu.edu.vn`***
