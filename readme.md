@@ -23,7 +23,7 @@ Cards Matching Memory Game là một trò chơi trí nhớ vui nhộn giúp phá
 
 ### 3. Các chức năng:
 > Video minh họa: 
-> [Cards Matching Memory](https://www.youtube.com/watch?v=pkPmjfnKj4E)
+> [Cards Matching Memory](https://youtu.be/ckTjlkXhW1E)
 - Chọn độ khó: Độ khó khác nhau thì số lượng thẻ bài sẽ khác nhau. 
 - Chức năng tắt nhạc: Khi nhấn vào sẽ dừng phát nhạc nền
 - Chức năng tắt hiệu ứng âm thanh: Khi nhấn vào sẽ tắt các âm thanh nhấn nút, click, chọn đúng cặp thẻ bài ...
