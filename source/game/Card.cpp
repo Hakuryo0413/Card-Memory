@@ -131,7 +131,7 @@ void Card::update(float deltaTime)
     if(timeToDisappear > 0)
     {
         timeToDisappear -= deltaTime;
-        alpha = 255 * timeToDisappear / 2;
+        alpha = 255 * timeToDisappear / 1;
         if(timeToDisappear <= 0)
         {
             invisible = true;
