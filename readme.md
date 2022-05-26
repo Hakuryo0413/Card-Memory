@@ -5,12 +5,12 @@ _Trương Thị Huyền Trâm - 21020413_
 
 Project này mình làm về game Cards Matching Memory. Ngôn ngữ được sử dụng trong game là [C++](https://vi.wikipedia.org/wiki/C%2B%2B) và thư viện đồ họa [SDL2](https://www.libsdl.org/).
 ### Mục lục:
-- 1. Hướng dẫn cài đặt
-- 2. Mô tả chung
-- 3. Các chức năng
-- 4. Các kĩ thuật sử dụng
-- 5. Nguồn tham khảo
-- 6. Kết luận
+- [1. Hướng dẫn cài đặt](https://github.com/Hakuryo0413/Card-Memory#1-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t)
+- [2. Mô tả chung](https://github.com/Hakuryo0413/Card-Memory#2-m%C3%B4-t%E1%BA%A3-chung)
+- [3. Các chức năng](https://github.com/Hakuryo0413/Card-Memory#3-c%C3%A1c-ch%E1%BB%A9c-n%C4%83ng)
+- [4. Các kĩ thuật sử dụng](https://github.com/Hakuryo0413/Card-Memory#4-c%C3%A1c-k%C4%A9-thu%E1%BA%ADt-s%E1%BB%AD-d%E1%BB%A5ng)
+- [5. Nguồn tham khảo](https://github.com/Hakuryo0413/Card-Memory#5ngu%E1%BB%93n-tham-kh%E1%BA%A3o)
+- [6. Kết luận](https://github.com/Hakuryo0413/Card-Memory#6-k%E1%BA%BFt-lu%E1%BA%ADn)
 ### 1. Hướng dẫn cài đặt:
  
 - Bước 1: Cài đặt `SDL2` vào `Visual Studio Code` theo như [Hướng dẫn](https://www.youtube.com/watch?v=Zdg6aaBTctw&t=449s).
